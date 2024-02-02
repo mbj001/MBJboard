@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1 class="title">{{title}}</h1>
+
+<div class="detail container">
+    <p>글 번호: {{detail_content.count}}</p>
+    <p class="title">{{detail_content.title}}</p>
+    <p class="name">작성자 : {{detail_content.name}}</p>
+    <p class="id">ID : {{detail_content.id}}</p>
+    <p class="date">작성일 : {{detail_content.create_date}}</p>
+    <p class="content">{{detail_content.content}}</p>
+
+    <div class="detail-button">
+        <a href="/">돌아가기</a>
+        <a href="/edit/{{detail_content.count}}&{{detail_content.id}}">수정</a>
+        <a href="/delete/{{detail_content.count}}&{{detail_content.id}}">삭제</a>
+    </div>
+</div>
+
+{% endblock %}

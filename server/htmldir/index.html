@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="index-top">
+    <div class="top1">
+        <div class="index-top-left">
+            <a href="/">NEVER</a>
+            <a href="userInfo">내정보</a>
+        </div>
+        {% if userid %}
+        <p class="color-white fontS-13">아이디 : <span class="fontW-700 pl-10px">{{userid}}</span><a href="logout" class="pl-30px fontW-700">로그아웃</a></p>
+        {% else %}
+        <a href="login">로그인</a>
+        {% endif %}
+    </div>
+    <div class="top2">
+        <p class="index-title">{{title}}</p>
+    </div>
+</div>
+<div class="container">
+
+    <table class="table-content">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>이름</th>
+                <th>아이디</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for write_content in select_content %}
+                <tr>
+                    <td>{{write_content.count}}</th>
+                    <td><a href="viewDetail/{{write_content.count}}">{{write_content.title}}</a></th>
+                    <td>{{write_content.name}}</th>
+                    <td>{{write_content.id}}</th>
+                    <td>{{write_content.wwdate}}</th>
+                    <td>{{write_content.visit_count}}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="mainpage-bottom">
+        <div></div>
+        <div class="page-box">
+            <a href="index/{{nowPage - 1}}" class="before-page">이전</a>
+            <p>{{nowPage}} page</p>
+            <p>/</p>
+            <p>{{allPage}} page</p>
+            <a href="index/{{nowPage + 1}}" class="next-page">다음</a>
+            
+        </div>
+        <a href="write"><p>글쓰기</p></a>
+        <!-- <a href="/reset_count"><p>새로고침</p></a> -->
+    </div>
+</div>
+{% endblock %}

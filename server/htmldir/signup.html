@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="signup-form-box">
+    <p class="signup-title">{{title}}</p>
+    <form action="/newSignup" method="POST" class="signup-box">
+        <div class="signup-form1">
+            <i class="ri-user-3-line signup-icon-style signup-id-icon"></i>
+            <input type="text" id="userid" name="userid" placeholder="아이디" required>
+            <i class="ri-lock-line signup-icon-style signup-pw-icon"></i>
+            <input type="password" id="userpw" name="userpw" placeholder="비밀번호" required>
+        </div>
+        <div class="signup-form2">
+            <i class="ri-user-3-line signup-icon-style signup-name-icon"></i>
+            <input type="text" id="username" name="username" placeholder="이름" required>
+            <i class="ri-calendar-check-line signup-icon-style signup-birth-icon"></i>
+            <input type="text" id="userbirth" name="userbirth"  placeholder="생년월일 8자리" required>
+            <i class="ri-phone-line signup-icon-style signup-phone-icon"></i>
+            <input type="text" id="userphone" name="userphone" placeholder="전화번호" required>
+        </div>
+        <a href="/login" class="signup-back">취소</a>
+        <button type="submit" class="signup-complete">가입하기</button>
+    </form>
+</div>
+
+{% endblock %}

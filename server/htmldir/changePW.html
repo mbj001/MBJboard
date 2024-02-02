@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- findPw2 의 style 그대로 사용 -->
+<div class="findPw2-top">
+    <div class="top1">
+        <div class="findPw2-top-left">
+            <a href="/">NEVER</a>
+            <a href="#">내정보</a>
+        </div>
+        <a href="login">로그인</a>
+    </div>
+    <div class="top2">
+        <div class="top2-box">
+            <div class="top2-left">
+                <p>아이디 찾기</p>
+            </div>
+            <div class="top2-mid">
+                <p>비밀번호 찾기</p>
+            </div>
+            <p class="hidden-box">hidden</p>
+        </div>
+    </div>
+</div>
+
+<div class="changePW-main">
+    <div class="main-top">
+        <p>비밀번호 재설정</p>
+        <p>01. 아이디 입력 > 02. 본인 확인 <span class="font-green">03. 비밀번호 재설정</span></p>
+    </div>
+    <div class="main-mid-top">
+        <p>비밀번호를 변경해 주세요.</p>
+        <p>다른 아이디나 사이트에서 사용한 적 없는 안전한 비밀번호로 변경해 주세요.</p>
+    </div>
+    <form action="/changePW_form" method="POST">
+        <div class="main-mid-content">
+            <div class="newPw-box">
+                <p>네이버 아이디 : <span class="color-green">{{findPW2_userid}}</span></p>
+                <input type="hidden" id="userid" name="userid" value="{{findPW2_userid}}">
+                <input type="password" id="newpassword" name="newpassword" placeholder="새 비밀번호">
+                <input type="password" id="newpassword_check" name="newpassword_check" placeholder="새 비밀번호 확인">
+            </div>
+            <p>영문, 숫자, 특수문자를 함께 사용하면 보다 안전합니다.</p>
+            <p>다른 사이트와 다른 <span class="fontW-700">네이버 아이디만의 비밀번호</span>를 만들어 주세요.</p>
+        </div>
+        <button type="submit" class="changepw-submit-button">확인</button>
+    </form>
+    <p>비밀번호를 바꾸면, 모바일 기기(휴대전화/태블릿 PC)와 외부 메일 프로그램(POP3)에서 모두 로그아웃 됩니다.</p>
+    <p>시료운 비밀번호로 다시 로그인해 주세요. <a href="#" class="text-underline color-black">자세히 보기</a></p>
+</div>
+
+{% endblock %}

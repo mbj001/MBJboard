@@ -1,0 +1,1161 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Moirai+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Moirai+One&family=Russo+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Moirai+One&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Russo+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Moirai+One&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Russo+One&display=swap');
+@import url(remixicon.css);
+
+/* 
+font-family: 'Black Han Sans', sans-serif;
+font-family: 'Moirai One', cursive;
+font-family: 'Dongle', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ########## */
+* { box-sizing: border-box}
+
+.container{
+    width: 90%;
+    margin-left: 5%;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+
+h1{
+    /* font-family: 'Moirai One', cursive; */
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Dongle', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
+    text-align: center;
+    font-size: 120px;
+    margin-bottom: 0px;
+    /* background-color: #efefef; */
+    color:rgb(101, 211, 81);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    letter-spacing: 1vh;
+}
+
+button{ cursor: pointer; }
+
+.d-flex{ display: flex; }
+
+.align-items-center{ align-items: center; }
+.justify-content-center{ justify-content: center; }
+.justify-space-between{ justify-content: space-between; };
+
+.text-center{ text-align: center !important; }
+.text-underline{ text-decoration: underline;}
+
+.bg-green{ background-color: rgb(101, 211, 81); }
+.bg-b2{ background-color: #b2b2b2;};
+
+.color-green{ color: rgb(101, 211, 81); }
+.color-gray{ color: gray; }
+.color-black{ color: black; }
+.color-white{ color: white !important; }
+.color-yellow{ color: yellow !important; }
+.color-b2{ color: #b2b2b2; }
+.color-cb{ color: #cbcbcb; }
+
+.fontS-12{ font-size: 12px; }
+.fontS-13{ font-size: 13px; }
+.fontS-14{ font-size: 14px; }
+.fontS-15{ font-size: 15px; }
+.fontS-16{ font-size: 16px; }
+.fontS-17{ font-size: 17px; }
+.fontS-18{ font-size: 18px; }
+.fontS-19{ font-size: 19px; }
+.fontS-20{ font-size: 20px; }
+
+.fontW-100{ font-weight: 100; }
+.fontW-200{ font-weight: 200; }
+.fontW-300{ font-weight: 300; }
+.fontW-400{ font-weight: 400; }
+.fontW-500{ font-weight: 500; }
+.fontW-600{ font-weight: 600; }
+.fontW-700{ font-weight: 700; }
+.fontW-800{ font-weight: 800; }
+.fontW-900{ font-weight: 900; }
+
+.mt-1{ margin-top: 1vh; }
+.mt-2{ margin-top: 2vh; }
+.mt-3{ margin-top: 3vh; }
+
+.mb-0{ margin-bottom: 0; }
+.mb-5px{ margin-bottom: 5px; }
+.mb-10px{ margin-bottom: 10px; }
+.mb-15px{ margin-bottom: 15px; }
+
+.mt-0{ margin-top: 0; }
+.mt-5px{ margin-top: 5px; }
+.mt-10px{ margin-top: 10px; }
+.mt-15px{ margin-top: 15px; }
+.mt-30px{ margin-top: 30px; }
+
+/* padding */
+.pb-0{ padding-bottom: 0; }
+.pb-5px{ padding-bottom: 5px; }
+.pb-10px{ padding-bottom: 10px; }
+.pb-15px{ padding-bottom: 15px; }
+
+.pt-0{ padding-top: 0; }
+.pt-5px{ padding-top: 5px; }
+.pt-10px{ padding-top: 10px; }
+.pt-15px{ padding-top: 15px; }
+.pt-30px{ padding-top: 30px; }
+
+.pr-0{ padding-right: 0; }
+.pr-5px{ padding-right: 5px; }
+.pr-10px{ padding-right: 10px; }
+.pr-15px{ padding-right: 15px; }
+.pr-20px{ padding-right: 20px; }
+.pr-30px{ padding-right: 30px; }
+
+.pl-0{ padding-left: 0; }
+.pl-5px{ padding-left: 5px; }
+.pl-10px{ padding-left: 10px; }
+.pl-15px{ padding-left: 15px; }
+.pl-20px{ padding-left: 20px; }
+.pl-30px{ padding-left: 30px; }
+
+.hidden-box{ visibility: hidden; }
+.display-none{ display: none; }
+.nohidden-box{ display: block; }
+.font-green{ color: rgb(21, 182, 21); }
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### index.html*/
+.table-content{
+    width: 100%;
+    /* border: 2px solid #333; */
+    border-collapse: collapse;
+}
+
+.table-content>thead>tr{
+    border-bottom: 4px solid #333;
+    line-height: 4vh;;
+}
+
+.table-content>tbody>tr{
+    border-bottom: 2px solid #333;
+
+}
+
+.table-content td{
+    text-align: center;
+    height: 3.5vh;
+
+}
+
+.table-content td:nth-child(2){
+    text-align: left;
+    color: black;;
+}
+
+.table-content td:nth-child(2),
+.table-content th:nth-child(2){
+    width: 35%;
+}
+
+.mainpage-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-box p{
+    padding-right: 0.5vh;
+    padding-left: 0.5vh; 
+}
+
+.before-page{
+    padding-right: 10px;
+    display: block;
+    color: black;
+}
+
+.next-page{
+    padding-left: 10px;
+    display: block;
+    color: black;
+}
+
+.mainpage-bottom>a>p{
+    color: black;
+    border: 1px solid #999;
+    padding: 0.5vh 1vh;
+    border-radius: 10px;
+    background-color: #efefef;
+    margin-right: 2vh;
+}
+
+.index-top{
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.index-top>.top1{
+    font-family: 'Lato', sans-serif;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 12, 45);
+    padding-left: 20px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.index-top>.top1 a{
+    padding-top: 0px;
+    font-size: 13px;
+    color: white;
+}
+
+.index-top-left>a:first-child{
+    font-weight: 900;
+    color: rgb(101, 211, 81);
+    padding-right: 10px;
+}
+
+.index-top-left{
+    display: flex;
+}
+
+.index-top>.top2{
+    height: 60px;
+    background-color: rgb(81, 186, 62);
+    margin-bottom: 50px;
+}
+
+.index-title{
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+}
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### write.html*/
+.write-form-box{
+    width: 50%;
+    margin: 10vh auto;
+}
+.write-box>input{
+    margin-top: 0px;
+    width: 100%;
+    height: 4vh;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.write-box>button{
+    margin-top: 5vh;
+
+}
+
+.write-box>.write-content-box{
+    height: 10vh;
+    width: 100%;
+}
+
+.write-button-box{
+    margin: 2vh auto;
+    text-align: center;
+}
+
+
+.write-form-box button{
+    border: 1px solid #efefef;
+    color: black;
+    border-radius: 10px;
+    padding: 1vh 2vh;
+    cursor: pointer;
+}
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### viewDetail.html*/
+.detail>.title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 6vh;
+    border-bottom: 1px solid #333;
+    color: rgb(89, 89, 251);
+}
+
+.detail>.date{
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #333;
+}
+
+.detail>.content{
+    white-space: pre-wrap;
+}
+
+.detail-button{
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.detail-button>a{
+    padding: 1vh 1.5vh;
+    background-color: #efefef;
+    color: black;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### login.html*/
+.login-title{
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(101, 211, 81);
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+    margin-bottom: 0;
+}
+
+.login-form-box{
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #bababa;
+    border-radius: 7px;
+    padding: 12px;
+    color: red;
+}
+
+.login-input-box{
+    width: 360px;
+    position: relative;
+}
+
+.login-error-message{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login-box input{
+    /* width: 100%; */
+    width: 374px;
+    height: 5vh;
+    cursor: pointer;
+    padding-left: 40px;
+    border-radius: 5px;
+    border: 1px solid #cbcbcb;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.login-box input::placeholder{
+    color: #b2b2b2;
+}
+
+.login-box input:focus{
+    outline: 1px solid green !important;
+}
+
+.id-icon{
+    position: absolute;
+    color: #cbcbcb;
+    font-size: 18px;
+    top: 14px;
+    left: 12px;
+}
+
+.pw-icon{
+    position: absolute;
+    color: #cbcbcb;
+    font-size: 18px;
+    bottom: 18px;
+    left: 13px;
+}
+
+
+.login-button{
+    margin-top: 3vh;
+}
+
+.login-button{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    border: 1px solid #efefef;
+    background-color: rgb(101, 211, 81);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 2vh;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.login-button-box{
+    justify-content: center;
+    display: flex;
+}
+
+.login-button-box p{
+    font-size: 13px;
+    color: #b2b2b2;
+}
+
+.login-button-box>p:nth-child(2),
+.login-button-box>p:nth-child(3),
+.login-button-box>p:nth-child(4){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### loginFail.html*/
+.loginFail-button{
+    border: 1px solid #efefef;
+    color: black;
+    border-radius: 10px;
+    padding: 1vh 2vh;
+    cursor: pointer;
+    display: block;
+    margin: 5vh auto;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### edit.html*/
+.edit .title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 6vh;
+    border-bottom: 1px solid #333;
+    color: rgb(89, 89, 251);
+}
+
+.edit .date{
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #333;
+}
+
+.edit .content{
+    white-space: pre-wrap;
+}
+
+.edit-input-title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 6vh;
+    /* border-bottom: 1px solid #333; */
+}
+
+.edit-input-title::placeholder{
+    color: rgb(89, 89, 251);
+}
+
+.edit-textarea{
+    height: 10vh;
+    width: 100%;
+}
+
+.edit-textarea::placeholder{
+    color: black;
+}
+
+.edit-button-box>button{
+    margin-top: 10vh;
+}
+
+.edit-button-box button{
+    border: 1px solid #efefef;
+    color: black;
+    border-radius: 10px;
+    padding: 1vh 2vh;
+    cursor: pointer;
+}
+
+.edit-button-box{
+    text-align: center;
+}
+
+.edit-button-box a{
+    color: black;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### signup.html*/
+.signup-title{
+    font-family: 'Dongle', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(101, 211, 81);
+    margin-bottom: 30px;
+}
+
+.signup-form-box{
+    width: 400px;
+    margin: 10vh auto;
+}
+
+.signup-form1>input,
+.signup-form2>input{
+    margin-bottom: 2px;
+    width: 100%;
+    height: 4vh;
+    border-bottom: 0.5px solid #cbcbcb;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    padding-left: 30px;
+}
+
+.signup-form1{
+    margin-bottom: 20px;
+}
+
+
+.signup-form1 input:focus,
+.signup-form2 input:focus{
+    outline: 1px solid green !important;
+    /* padding-left: 30px; */
+}
+
+.signup-form1 input::placeholder,
+.signup-form2 input::placeholder{
+    /* padding-left: 30px; */
+    color: #b2b2b2;
+}
+
+.signup-form1{
+    position: relative;
+}
+
+.signup-form2{
+    position: relative;
+}
+
+.signup-icon-style{
+    position: absolute;
+    color: #cbcbcb;
+    font-size: 18px;
+}
+
+.signup-id-icon{
+    top: 10px;
+    left: 10px;
+}
+
+.signup-pw-icon{
+    bottom: 11px;
+    left: 11px;
+}
+
+.signup-name-icon{
+    top: 10px;
+    left: 10px;
+}
+
+.signup-birth-icon{
+    top: 48px;
+    left: 10px;
+}
+
+.signup-phone-icon{
+    top: 86px;
+    left: 10px;
+}
+
+.signup-back{
+    display: block;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px 2vh;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.signup-complete{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    border: 1px solid #efefef;
+    background-color: rgb(101, 211, 81);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 2vh;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### findPW.html*/
+.findpw-title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(101, 211, 81);
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.findpw-text{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.findpw-form{
+    width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.findpw-box input{
+    margin-bottom: 15px;
+    width: 100%;
+    height: 5vh;
+    border-bottom: 0.5px solid #cbcbcb;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+
+.findpw-box input:focus{
+    outline: 1px solid green;
+}
+
+.findpw-box input::placeholder{
+    font-size: 14px;
+}
+
+.findpw-box .findpw-icon{
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.findpw-box button{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(101, 211, 81);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.findpw-bottom{
+    text-align: center;
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+.findpw-bottom>a{
+    padding-left: 5px;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### findPW2.html*/
+.findPw2-top{
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findPw2-top>.top1{
+    font-family: 'Lato', sans-serif;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 12, 45);
+    padding-left: 20px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.findPw2-top>.top1 a{
+    padding-top: 0px;
+    font-size: 13px;
+    color: white;
+}
+
+.findPw2-top-left>a:first-child{
+    font-weight: 900;
+    color: rgb(101, 211, 81);
+    padding-right: 10px;
+}
+
+
+.findPw2-top-left{
+    display: flex;
+}
+
+.findPw2-top>.top2{
+    height: 60px;
+    background-color: rgb(81, 186, 62);
+}
+
+.findPw2-top>.top2>.top2-box{
+    width: 670px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.findPw2-top .top2-left>p{
+    color: white;
+}
+
+.findPw2-top .top2-mid>p{
+    color: yellow;
+}
+
+.findPw2-main{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 670px;
+    margin: 30px auto;
+}
+
+.findPw2-main>.main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.findPw2-main>.main-top>p{
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+.findPw2-main>.main-top>p:first-child{
+    color: black;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+}
+
+.findPw2-main>.main-top>p:nth-child(2){
+    font-size: 12px;
+    color: gray;
+}
+
+.findPw2-main>.main-mid>p:first-child{
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.cert-1{
+    border: 1px solid #cbcbcb;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cert-1-form-div{
+    /* display: none; */
+    margin-left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cert-1>label{
+    font-weight: 500;
+}
+
+.cert-1-form>p{
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+.cert-1-form>div{
+    margin-bottom: 5px;
+}
+
+.cert-1-form label{
+    display: inline-block;
+    width: 70px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cert-1-form input{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #b2b2b2;
+}
+
+.findPw2-submit-button{
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 7px 20px;
+    display: block;
+    /* margin: 0px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### changePW.html*/
+.changePW-main{
+    width: 670px;
+    margin: 30px auto;
+}
+
+.changePW-main>.main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 5px;
+}
+
+.changePW-main>.main-top>p{
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+.changePW-main>.main-top>p:first-child{
+    color: black;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+}
+
+.changePW-main>.main-top>p:nth-child(2){
+    font-size: 12px;
+    color: gray;
+}
+
+.changePW-main>.main-mid-top>p{
+    font-size: 13px;
+    margin-top: 0px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.changePW-main .main-mid-content{
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+.changePW-main .main-mid-content{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.newPw-box{
+    margin-bottom: 50px;
+}
+
+.newPw-box>input{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    box-shadow: inset 0.5px 0.5px 0px 0px;
+}
+
+.newPw-box>input::placeholder{
+    font-weight: 700;
+
+}
+
+.newPw-box>p{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.changePW-main .main-mid-content>p{
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.changepw-submit-button{
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 7px 20px;
+    display: block;
+    /* margin: 0px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+}
+
+.changePW-main>p{
+    color: gray;
+    margin-bottom: 0px;
+    font-size: 13px;
+    margin-top: 0px;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### findID.html*/
+.findID-top{
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findID-top>.top1{
+    font-family: 'Lato', sans-serif;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 12, 45);
+    padding-left: 20px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.findID-top>.top1 a{
+    padding-top: 0px;
+    font-size: 13px;
+    color: white;
+}
+
+.findID-top-left>a:first-child{
+    font-weight: 900;
+    color: rgb(101, 211, 81);
+    padding-right: 10px;
+}
+
+
+.findID-top-left{
+    display: flex;
+}
+
+.findID-top>.top2{
+    height: 60px;
+    background-color: rgb(81, 186, 62);
+}
+
+.findID-top>.top2>.top2-box{
+    width: 670px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.findID-top .top2-left>p{
+    color: white;
+}
+
+.findID-top .top2-mid>p{
+    color: yellow;
+}
+
+.findID-main{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 670px;
+    margin: 30px auto;
+}
+
+.findID-main>.main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.findID-main>.main-top>p{
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+.findID-main>.main-top>p:first-child{
+    color: black;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+}
+
+.findID-main>.main-top>p:nth-child(2){
+    font-size: 12px;
+    color: gray;
+}
+
+.findID-main>.main-mid>p:first-child{
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.cert-1{
+    border: 1px solid #cbcbcb;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cert-1-form-div{
+    /* display: none; */
+    margin-left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cert-1>label{
+    font-weight: 500;
+}
+
+.cert-1-form>p{
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+.cert-1-form>div{
+    margin-bottom: 5px;
+}
+
+.cert-1-form label{
+    display: inline-block;
+    width: 70px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cert-1-form input{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #b2b2b2;
+}
+
+.findID-submit-button{
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 7px 20px;
+    display: block;
+    /* margin: 0px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### findIDResult.html*/
+.findIDResult-main .cert-1{
+    padding-left: 0px;
+}
+
+.cert-1>.findid-result-id{
+    text-align: center;
+}
+
+.IDR-button{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.IDR-button>a:first-child{
+    padding: 8px 30px;
+    background-color:rgb(21, 182, 21);
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+    border-radius: 3px;
+    border: 1px solid #b2b2b2;
+}
+
+.IDR-button>a:nth-child(2){
+    padding: 8px 25px;
+    background-color:#eaeaea;
+    font-size: 12px;
+    color: black;
+    font-weight: 700;
+    border-radius: 3px;
+    border: 1px solid #b2b2b2;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* ##### userInfo.html*/
+.userInfo-content>p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}

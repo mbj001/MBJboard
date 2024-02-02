@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+
+<div class="edit container">
+    <form action="/edit_form" method="POST">
+        <p>글 번호: {{edit_info.count}}</p>
+        <input type="hidden" id="count" name="count" value={{edit_info.count}}>
+        <input type="text" id="title" name="title" placeholder="{{edit_info.title}}" class="edit-input-title" required>
+        <p class="name">작성자 : {{edit_info.name}}</p>
+        <p class="id">ID : {{edit_info.id}}</p>
+        <p class="date">작성일 : {{edit_info.create_date}}</p>
+        <textarea type="text" id="content" name="content" placeholder="{{edit_info.content}}" class="edit-textarea" required></textarea>
+        <div class="edit-button-box">
+            <button type="submit">등록하기</button>
+            <button><a href="viewDetail">취소</a></button>
+        </div>
+    </form>
+</div>
+{% endblock %}
