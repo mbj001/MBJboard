@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    
+<a href="/"><p class="login-title">{{title}}</p></a>
+<div class="login-form-box">
+    <form action="/checkId" method="POST" class="login-box">
+        <!-- name 의 값으로 전달함. -->
+        <div class="login-input-box">
+            <i class="ri-user-3-line id-icon"></i>
+            <input type="text" id="userid" name="userid" placeholder="아이디">
+            <i class="ri-lock-line pw-icon"></i>
+            <input type="password" id="userpass" name="userpass" placeholder="비밀번호">
+        </div>
+        <p class="login-error-message">{{e_message}}</p>
+        <button type="submit" class="login-button">로그인</button>
+    </form>
+    <div class="login-button-box">
+        <a href="findPw"><p>비밀번호 찾기</p></a>
+        <p>|</p>
+        <a href="findId"><p>아이디 찾기</p></a>
+        <p>|</p>
+        <a href="signup"><p>회원가입</p></a>
+
+    </div>
+</div>
+{% endblock %}

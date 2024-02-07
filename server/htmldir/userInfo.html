@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="index-top">
+    <div class="top1">
+        <div class="index-top-left">
+            <a href="/">NEVER</a>
+        </div>
+        {% if userid %}
+        <p class="color-white fontS-13">아이디 : <span class="fontW-700 pl-10px">{{userid}}</span><a href="logout" class="pl-30px fontW-700">로그아웃</a></p>
+        {% else %}
+        <a href="login">로그인</a>
+        {% endif %}
+    </div>
+    <div class="top2">
+        <p class="index-title">{{title}}</p>
+    </div>
+</div>
+<div class="userInfo-content">
+    <p>진짜 구현하기 귀찮아 죽겠네;; 나중에 할게..</p>
+</div>
+{% endblock %}

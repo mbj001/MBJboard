@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p class="findpw-title">{{title}}</p>
+<p class="findpw-text">비밀번호를 찾고자하는 아이디를 입력해주세요.</p>
+
+<div class="findpw-box">
+    <form action="/findPwForm" method="POST" class="findpw-form">
+        <i class="ri-user-3-line signup-icon-style findpw-icon"></i>
+        <input type="text" id="userid" name="userid" placeholder="네버 아이디 또는 단체 아이디" required>
+        <button type="submit">다음</button>
+    </form>
+    <p class="findpw-bottom">아이디가 기억나지 않는다면? <a href="findId" class="color-green">아이디 찾기</a></p>
+    <!-- <a href="login">돌아가기</a> -->
+</div>
+{% endblock %}

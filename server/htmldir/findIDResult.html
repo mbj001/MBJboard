@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="findID-top">
+    <div class="top1">
+        <div class="findID-top-left">
+            <a href="/">NEVER</a>
+            <a href="#">내정보</a>
+        </div>
+        <a href="login">로그인</a>
+    </div>
+    <div class="top2">
+        <div class="top2-box">
+            <div class="top2-left">
+                <p class="color-yellow">아이디 찾기</p>
+            </div>
+            <div class="top2-mid">
+                <p class="color-white">비밀번호 찾기</p>
+            </div>
+            <p class="hidden-box">hidden</p>
+        </div>
+    </div>
+</div>
+<div class="findID-main findIDResult-main">
+    <div class="main-top">
+        <p>아이디 찾기</p>
+    </div>
+    <div class="main-mid">
+        <p>고객님의 정보와 일치하는 아이디 목록입니다.</p>
+        <div class="cert-1">
+            <p class="findid-result-id mt-0 mb-0 fontW-700">{{userid}}</p>
+        </div>
+
+        <div class="IDR-button">
+            <a href="/login">로그인하기</a>
+            <a href="/findPW">비밀번호 찾기</a>
+        </div>
+
+        <p class="fontS-13 color-gray mb-0 mt-30px">가입한 아이다가 보이지 않나요? <a class="color-black text-underline">상세내용 펼치기</a></p>
+        <p class="fontS-13 color-gray mt-0">직접 가입하지 않은 아이디를 탈퇴(삭제)하고 싶으신가요? <a class="color-black text-underline">상세내용 펼치기</a></p>
+        <!-- <div class="cert-2">
+            <p>등록한 회원정보로 찾기 어려우시면, 본인 확인 후 비밀번호를 찾아드립니다.</p>
+            <input type="radio" id="my_phone" name="cert">본인 명의 휴대전화로 인증 (본인 주민등록번호로 가입된 휴대전화)
+            <p>내 명의(주만등록반호)의 휴대전화로 비밀번호를 재설정 할 수 있습니다.</p>
+        </div> -->
+    </div>
+</div>
+{% endblock %}

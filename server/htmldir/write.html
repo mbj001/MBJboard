@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1 class="title">{{title}}</h1>
+<div class="write-form-box">
+    <form action="/newWrite" form="GET" class="write-box">
+        <!-- name 의 값으로 전달함. -->
+        <p>제목</p>
+        <input type="text" id="title" name="title" placeholder="제목">
+        <!-- <p>작성자</p> -->
+        <input type="hidden" id="name" name="name" value="{{username}}">
+        <!-- <p>아이디</p> -->
+        <input type="hidden" id="id" name="id" value="{{userid}}">
+        <p>내용</p>
+        <!-- <input type="text" id="content" name="content" placeholder="" class="write-content-box"> -->
+        <textarea type="text" id="content" name="content" placeholder="" class="write-content-box" ></textarea>
+
+        
+        <button type="submit">등록하기</button>
+        <button><a href="/">돌아가기</a></button>
+    </form>
+</div>
+{% endblock %}
