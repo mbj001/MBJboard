@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center">
+    <div class="col-4"></div>
+    <h1 class="text-center mb-5 col-4"><a href="/">{{title}}</a></h1>
+    <div class="col-4">
+        <form action="/search" method="post">
+            <div class="d-flex align-items-center">
+                <!-- <label class="form-label col-3">Search</label> -->
+                <input type="text" name="search" class="form-control col-9 ">
+                <button type="submit" class="col-2 btn btn-secondary">검색</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <table class="bbslist table-hover">
+        <colgroup>
+          <col width="10%">
+          <col>
+          <col width="15%">
+          <col width="15%"> 
+          <col width="10%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tobody>
+            {% for rs in row %}
+            <tr>
+                <td class="text-center">{{rs.num}}</td>
+                <td class="title">
+                    {% if rs.grLayer %}
+                      <img src="images/blank.png" height="20" width="{{rs.grLayer}}" />
+                      <i class="ri-corner-down-right-line"></i>
+                    {% endif %}
+                   <a href="/view/{{rs.num}}">{{rs.title}}</a></td>
+                <td class="text-center">{{rs.writer}}</td>
+                <td class="text-center">{{rs.wdate}}</td>
+                <td class="text-center">{{rs.memoCount}}</td>
+            </tr>
+            {% endfor %}
+ 
+        </tobody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-7">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <!-- <a href="/?page={{pageCount*10-9}}" class="page-link" id="page_before">이전</a> -->                    
+                    <a href="/?page=1" class="page-link" id="page_{{pageCount*10+i}}">처음</a>
+                </li>
+                <li class="page-item">
+                    <!-- <a href="/?page={{pageCount*10-9}}" class="page-link" id="page_before">이전</a> -->                    
+                    <button type="button" class="page-link" id="page_before">이전</a>
+                </li>
+                {% for i in pageNum %}
+                    {% if contents %}
+                    <li class="page-item">
+                        <a href="/search/?page={{pageCount*10+i}}&content={{contents}}" class="page-link" id="page_{{pageCount*10+i}}">{{pageCount * 10 + i}}</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a href="/?page={{pageCount*10+i}}" class="page-link" id="page_{{pageCount*10+i}}">{{pageCount * 10 + i}}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                <li class="page-item">
+                    <!-- <a href="/?page={{pageCount*10+11}}" class="page-link" id="page_after">다음</a> -->
+                    <button type="button" class="page-link" id="page_after">다음</a>
+                </li>
+                <li class="page-item">
+                    <!-- <a href="/?page={{pageCount*10-9}}" class="page-link" id="page_before">이전</a> -->                    
+                    <a href="/?page={{totalPage}}" class="page-link" id="page_{{pageCount*10+i}}">끝</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-right">
+            <a href="/" class="btn btn-secondary mr-4">목록</a>
+            <a href="/write" class="btn btn-secondary">글쓰기</a> 
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+document.getElementById("page_{{page}}").classList.add("active"); 
+
+function pageBeforeFunc(num){
+    if(num < 0){
+        location.href="/?page=1";
+    }
+    else{
+        location.href="/?page={{pageCount*10-9}}";
+    }
+}  
+
+function pageAfterFunc(num){
+    if(num > Number("{{totalPage}}")){
+        location.href="/?page={{totalPage}}";
+    }
+    else{
+        location.href="/?page={{pageCount*10+11}}";
+    }
+}
+
+document.getElementById("page_before").addEventListener("click", () => pageBeforeFunc("{{pageCount*10 -9}}"));
+document.getElementById("page_after").addEventListener("click", () => pageAfterFunc("{{pageCount*10 + 11}}"));
+    
+
+</script>
+{% endblock %}
